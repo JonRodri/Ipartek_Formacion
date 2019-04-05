@@ -31,9 +31,8 @@ public class Ejercicio1 {
 		int j = 0;
 		do {
 			System.out.println("Iteracion " + j);
-		} while (j < 10) {
 			j++;
-		}
+		} while (j < 10);
 
 	} // end main
 

@@ -12,7 +12,7 @@ public class EjercicioBuclesInventao {
 
 		Scanner sc = new Scanner(System.in);
 
-		System.out.println("Introduce una letra, número o caracter especial:");
+		System.out.println("Introduce una  letra, número o caracter especial:");
 		z = sc.nextLine();
 		x = z.charAt(0);
 

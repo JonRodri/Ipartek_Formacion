@@ -7,15 +7,15 @@ public class EjemploVariables {
 	public static void main(String[] args) {
 		String nombre = "nombre";
 		String calle = "calle";
-		int edad = "99";
-		int portal = "99";
-		String Casado = 'N';
-		int hijos = "99";
-		float sueldo = "9999";
+		int edad = 99;
+		int portal = 99;
+		String Casado = "N";
+		int hijos = 99;
+		float sueldo = 9999;
 		String letraPiso = "A";
-		
+
 		Scanner sc = new Scanner(System.in);
-		
+
 		System.out.println("Nombre: ");
 		nombre = sc.nextLine();
 		System.out.println("Edad: ");
@@ -32,15 +32,13 @@ public class EjemploVariables {
 		portal = sc.nextInt();
 		System.out.println("Letra del piso: ");
 		letraPiso = sc.nextLine();
-		
-		
+
 		System.out.println("Nombre: " + nombre);
 		System.out.println("Edad: " + edad);
 		System.out.println("Casado: " + Casado);
-		if("s".equalsIgnoreCase(Casado)) {
+		if ("s".equalsIgnoreCase(Casado)) {
 			System.out.println("Si.");
-		}
-		else {
+		} else {
 			System.out.println("No.");
 		}
 		System.out.println("Num hijos: " + hijos);
@@ -49,6 +47,7 @@ public class EjemploVariables {
 		System.out.println("Portal: " + portal);
 		System.out.println("Letra del piso: " + letraPiso);
 
-	}
+		sc.close();
+	}// end main
 
 }
