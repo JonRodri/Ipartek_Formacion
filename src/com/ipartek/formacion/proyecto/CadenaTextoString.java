@@ -55,21 +55,27 @@ public class CadenaTextoString {
 		return resul;
 	}
 
+	/**
+	 * Indica si la palabra es palíndroma o no. Es caseInsensitive. Trima los
+	 * espacios en blanco a dcha. e izda.
+	 * 
+	 * @param cadena
+	 * @return resul boolean
+	 */
+
 	public static boolean esPalindroma(String cadena) {
-		String cadenaDos = "";
 		boolean resp = false;
 
-		for (int i = cadena.length(); i > 0; i--) {
-			cadenaDos = cadenaDos + cadena.charAt(i);
-		}
-
-		for (int i = 0; i < cadena.length(); i++) {
-			if (cadena.charAt(i) == cadenaDos.charAt(i)) {
-				resp = true;
-			} else {
-				resp = false;
-			}
-		}
+		/*
+		 * for (int i = cadena.length(); i > 0; i--) { cadenaDos = cadenaDos +
+		 * cadena.charAt(i); }
+		 * 
+		 * for (int i = 0; i < cadena.length(); i++) { if (cadena.charAt(i) ==
+		 * cadenaDos.charAt(i)) { resp = true; } else { resp = false; } }
+		 */
+		String darVuelta = darVuelta(cadena.toLowerCase());
+		if (cadena.toLowerCase().trim().equals(darVuelta))
+			resp = true;
 
 		return resp;
 	}
