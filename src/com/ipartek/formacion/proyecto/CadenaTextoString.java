@@ -5,10 +5,10 @@ public class CadenaTextoString {
 	public static void main(String[] args) {
 		String cadena = "SupercAlifragilisticoespiAlidoso";
 		String cadenaSucia = "   665534334     ";
-		char letra = 'a';
+		char letra = 'A';
 
 		// Limpiar espacios en blanco a derecha e izda.
-		cadenaSucia.trim();
+		cadenaSucia = cadenaSucia.trim();
 		System.out.println("Cadena sin espacios en blanco: " + cadenaSucia);
 		// cadena.length() -> devuelve la longitud
 		System.out.println("La longitud de la cadena es: " + cadena.length());
@@ -17,7 +17,7 @@ public class CadenaTextoString {
 		System.out.println("Minusculas: " + cadena.toLowerCase());
 		System.out.println("Mayusculas: " + cadena.toUpperCase());
 		System.out.println("Substring: " + cadena.substring(2, 4));
-		System.out.println(cadena + " tiene " + contarLetras(cadena, letra) + " letras.");
+		System.out.println(cadena + " tiene " + contarLetras(cadena, letra) + " " + letra);
 		System.out.println("La cadena reversa: " + darVuelta(cadena));
 		System.out.println("La cadena es palindroma: " + esPalindroma(cadena));
 	}
@@ -47,8 +47,8 @@ public class CadenaTextoString {
 		String resul = "";
 
 		if (cadena != null) {
-			for (int i = cadena.length(); i > 0; i--) {
-				resul += cadena.charAt(i); // Concatenar cadena.charAt(i) con cadenaRever
+			for (int i = cadena.length()-1; i >= 0; i--) {
+				resul += cadena.charAt(i); 
 			}
 		}
 

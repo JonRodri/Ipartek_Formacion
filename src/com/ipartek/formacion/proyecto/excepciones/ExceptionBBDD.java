@@ -2,7 +2,7 @@ package com.ipartek.formacion.proyecto.excepciones;
 
 public class ExceptionBBDD {
 
-	public static void main(String[] args) /* throws Exception */ {
+	public static void main(String[] args) throws Exception /* throws Exception */ {
 
 		System.out.println("Conectando a base de datos de null");
 		boolean isConected = conectarBBDD(null);
