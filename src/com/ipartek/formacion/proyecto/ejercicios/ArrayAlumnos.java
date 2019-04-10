@@ -36,11 +36,14 @@ public class ArrayAlumnos {
 
 	}
 
-	private static void menu() {
+	private static void menu() { // TODO menu() con Switch mejor
 
 		do {
-			System.out.println(
-					"Elige una opcion: (1-Listar alumnos 2-Buscar alumno por nombre 3-Buscar alumno por posicion)");
+			System.out.println("Elige una opcion:");
+			System.out.println("-----------------");
+			System.out.println("1.Listar alumnos");
+			System.out.println("2.Buscar alumno por nombre");
+			System.out.println("3.Buscar alumno por posicion");
 			opc = sc.nextInt();
 		} while (opc != OPCION_LISTAR && opc != OPCION_NOMBRE && opc != OPCION_POSICION && opc != SALIR);
 
@@ -73,6 +76,7 @@ public class ArrayAlumnos {
 			if (alumnos[i].equalsIgnoreCase(nombre) == true) {
 				System.out.println("El alumno que buscabas es el #" + i);
 				flag = false;
+				// break; si lo encuentra sale del for.
 			}
 		}
 
