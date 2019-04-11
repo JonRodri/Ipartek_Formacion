@@ -10,18 +10,18 @@ import org.apache.poi.xssf.usermodel.XSSFRow;
 import org.apache.poi.xssf.usermodel.XSSFSheet;
 import org.apache.poi.xssf.usermodel.XSSFWorkbook;
 
-public class LeerExcelKorrika1 {
+public class LeerExcelKorrika2 {
 
 	public static void main(String[] args) throws Exception {
 
-		String path = "C:\\hobetuz\\proyecto\\resources\\korrika1.xlsx";
+		String path = "C:\\hobetuz\\proyecto\\resources\\korrika2.xlsx";
 		File file = new File(path);
 		FileInputStream fis = new FileInputStream(file);
 
 		XSSFWorkbook libro = new XSSFWorkbook(fis);
-		XSSFSheet segundaHoja = libro.getSheetAt(1);
+		XSSFSheet Hoja1 = libro.getSheetAt(0);
 
-		Iterator it = segundaHoja.iterator();
+		Iterator it = Hoja1.iterator();
 		int cont = 0;
 		while (it.hasNext()) {
 
@@ -38,7 +38,15 @@ public class LeerExcelKorrika1 {
 				int horas = dateTiempo.getHours();
 				int minutos = dateTiempo.getMinutes();
 
-				System.out.printf("%-20s %s:%s \n", lugar, horas, minutos);
+				String horasMostrar = (horas < 10) ? "0" + horas : String.valueOf(horas);
+				String minutosMostrar = (minutos < 10) ? "0" + minutos : String.valueOf(minutos);
+
+				if (minutos < 10) {
+					System.out.printf("%-20s %s:0%s \n", lugar, horas, minutos);
+				} else {
+					System.out.printf("%-20s %s:%s \n", lugar, horas, minutos);
+				}
+
 			}
 			cont++;
 

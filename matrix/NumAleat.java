@@ -1,3 +1,6 @@
+//1.	Define un array de números enteros de 3 filas por 6 columnas con nombre num y asigna los valores al azar entre 10 y 100.
+//Mostrar posteriormente dicho array por consola.
+
 package matrix;
 
 public class NumAleat {
