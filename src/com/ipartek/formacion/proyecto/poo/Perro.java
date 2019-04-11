@@ -10,7 +10,7 @@ public class Perro {
 	// constructores
 	public Perro() {
 		super();
-		this.nombre = NULL;
+		this.nombre = "NULL";
 		this.raza = "Cruce";
 		this.vacunado = false;
 		this.peso = 0;
@@ -47,6 +47,12 @@ public class Perro {
 
 	public void setPeso(float peso) {
 		this.peso = peso;
+	}
+	
+	public void comparaFortaleza(Perro Odie, Perro Pluto, Perro AyteDeSanta, Perro Scooby) {
+		if(Scooby.getPeso() > Odie.getPeso() && Scooby.getPeso() > Pluto.getPeso() && Scooby.getPeso() > AyteDeSanta.getPeso()) {
+			System.out.println("#1 Scooby");
+		}
 	}
 
 }
