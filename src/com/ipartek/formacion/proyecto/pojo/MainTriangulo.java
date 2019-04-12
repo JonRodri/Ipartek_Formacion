@@ -4,7 +4,7 @@ a. Inicializar los atributos
 b. Imprimir el valor del lado mayor
 c. Mostrar en otro si es equilátero o no. (Los tres lados iguales).
 */
-package com.ipartek.formacion.proyecto.poo;
+package com.ipartek.formacion.proyecto.pojo;
 
 public class MainTriangulo {
 

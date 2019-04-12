@@ -1,18 +1,15 @@
-package com.ipartek.formacion.proyecto.poo;
+package com.ipartek.formacion.proyecto.pojo;
 
-public class Perro {
+public class Animal {
 	// atributos
 	private String nombre;
 	private String raza;
-	private boolean vacunado;
 	private float peso;
 
 	// constructores
-	public Perro() {
-		super();
+	public Animal() {
 		this.nombre = "NULL";
 		this.raza = "Cruce";
-		this.vacunado = false;
 		this.peso = 0;
 	}
 
@@ -33,14 +30,6 @@ public class Perro {
 		this.raza = raza;
 	}
 
-	public boolean isVacunado() {
-		return vacunado;
-	}
-
-	public void setVacunado(boolean vacunado) {
-		this.vacunado = vacunado;
-	}
-
 	public float getPeso() {
 		return peso;
 	}
@@ -48,11 +37,14 @@ public class Perro {
 	public void setPeso(float peso) {
 		this.peso = peso;
 	}
-	
-	public void comparaFortaleza(Perro Odie, Perro Pluto, Perro AyteDeSanta, Perro Scooby) {
-		if(Scooby.getPeso() > Odie.getPeso() && Scooby.getPeso() > Pluto.getPeso() && Scooby.getPeso() > AyteDeSanta.getPeso()) {
-			System.out.println("#1 Scooby");
-		}
+
+	public String sonido() {
+		return ".......Sin sonido......";
+	}
+
+	@Override
+	public String toString() {
+		return "Animal [nombre=" + nombre + ", raza=" + raza + ", peso=" + peso + ", sonido=" + sonido() + "]";
 	}
 
 }
