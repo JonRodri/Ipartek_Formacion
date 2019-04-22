@@ -13,9 +13,12 @@ public class MainTriangulo {
 		
 		System.out.println("Triangulo");
 		System.out.println("---------");
-		System.out.printf("A: %s  B: %s  C:  %s", tri.getA(), tri.getB(), tri.getC());
-		ladoMayor(tri.getA(), tri.getB(), tri.getC());
-		equilatero(tri.getA(), tri.getB(), tri.getC());
+		tri.setA(5);
+		tri.setB(5);
+		tri.setC(4);
+		System.out.printf("A: %s  B: %s  C:  %s\n\n", tri.getA(), tri.getB(), tri.getC());
+		tri.ladoMayor(tri.getA(), tri.getB(), tri.getC());
+		tri.equilatero(tri.getA(), tri.getB(), tri.getC());
 	}
 
 }

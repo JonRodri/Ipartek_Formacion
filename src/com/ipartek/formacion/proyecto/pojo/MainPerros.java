@@ -3,12 +3,17 @@ package com.ipartek.formacion.proyecto.pojo;
 public class MainPerros {
 
 	public static void main(String[] args) {
-		Perro Scooby = new Perro();
-		Perro Pluto = new Perro();
-		Perro AyteDeSanta = new Perro();
-		Perro Odie = new Perro();
-		// Perro[] dog = new Perro[4];
+		Perro[] dog = {
+				new Perro("Odie", "cruce", true, 15),
+				new Perro("AyteDeSanta", "cruce", false, 15),
+				new Perro("Pluto", "cruce", false, 30),
+				new Perro("Scooby Doo", "cruce", false, 40),
+		};
+		
+		listarPerros(dog);
+		
 
+		/*
 		Odie.setNombre("Odie");
 		Odie.setRaza("");
 		Odie.setVacunado(true);
@@ -42,14 +47,13 @@ public class MainPerros {
 		 * Scooby.getNombre(), Scooby.getRaza(), Scooby.isVacunado(), Scooby.getPeso());
 		 */
 
-		System.out.println(Odie); // Meterlos en un array
-		System.out.println(Scooby);
-		System.out.println(Pluto);
-		System.out.println(AyteDeSanta);
+		
+		
+		/*
 		System.out.println("RANKING FORTALEZA");
 		System.out.println("-----------------");
 		Perro.comparaFortaleza(perros);
-
+		*/
 	}
 
 }

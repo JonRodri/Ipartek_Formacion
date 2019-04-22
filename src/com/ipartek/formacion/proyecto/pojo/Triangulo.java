@@ -44,19 +44,23 @@ public class Triangulo {
 
 	
 	public void ladoMayor(int a, int b, int c) {
+		
 		if(a > b && a > c) {
 			System.out.println("A es el lado mayor.");
-		} 
-		else if(b > c && b > a) {
+		} else if(b > c && b > a) {
 			System.out.println("B es el lado mayor.");
-		} else {
+		} else if(c > a && c > b) {
 			System.out.println("C es el lado mayor.");
+		} else {
+			System.out.println("Hay varios lados iguales.");
 		}
 	}
 	
 	public void equilatero(int a, int b, int c) {
 		if(a == b && a == c) {
 			System.out.println("Es equilatero.");
+		} else {
+			System.out.println("No es equilatero.");
 		}
 	}
 }

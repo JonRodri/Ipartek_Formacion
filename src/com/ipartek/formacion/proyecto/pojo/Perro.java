@@ -1,14 +1,21 @@
 package com.ipartek.formacion.proyecto.pojo;
 
+//import java.util.Scanner;
+
 public class Perro extends Animal {
 	// atributos
 	private boolean vacunado;
 
 	// constructores
 	public Perro() {
-		super();
-		this.vacunado = false;
 	}
+
+	public Perro(boolean vacunado) {
+		super();
+		this.vacunado = vacunado;
+	}
+
+
 
 	public boolean isVacunado() {
 		return vacunado;
@@ -27,15 +34,28 @@ public class Perro extends Animal {
 		return "Guau guau";
 	}
 
-	// otros metodos
-	/*
-	 * public void comparaFortaleza(Perro Odie, Perro Pluto, Perro AyteDeSanta,
-	 * Perro Scooby) { if (Scooby.getPeso() > Odie.getPeso() && Scooby.getPeso() >
-	 * Pluto.getPeso() && Scooby.getPeso() > AyteDeSanta.getPeso()) {
-	 * System.out.println("#1 Scooby"); } }
-	 */
-	public static void comparaFortaleza(Perro[] perros) {
-
+	// métodos
+	public void listarPerros(Perro dog[]) {
+		Perro aux = new Perro();
+		
+		for (int i = 0; i < dog.length; i++) {
+			if (dog[i].getNombre().charAt(0) > dog[i + 1].getNombre().charAt(0)) {
+				aux = dog[i];
+				dog[i] = dog[i + 1];
+				dog[i] = aux;
+			}
+		}
 	}
-
+	
+	/*
+	public void crearPerros(Perro dog[]) {
+		Scanner sc = new Scanner(System.in);
+		
+		for(int i=0; i<dog.length; i++) {
+			System.out.printf("Nombre: %s\nRaza: %s\nPeso: %s\n", dog[i].setNombre(), dog[i].setRaza(getRaza()), dog[i].setVacunado(vacunado), dog[i].setPeso(getPeso()));
+		}
+		
+		sc.close();
+	}
+	*/
 }

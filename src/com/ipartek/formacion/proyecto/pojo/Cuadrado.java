@@ -27,13 +27,17 @@ public class Cuadrado {
 	public void setLado(int lado) {
 		this.lado = lado;
 	}
-
-	public void cargarDatos(lado) {
-		String sLado = 
+	
+	//métodos
+	public void cargarDatos(float lado) {
+		String sLado = Float.toString(lado);
 		
-		JOptionPane.showInputDialog("Introduce el valor de un lado:");
-		
+		sLado = JOptionPane.showInputDialog("Introduce el valor de un lado:");
+		lado = Float.parseFloat(sLado);
 	}
 	
-	
+	public void perimetroSuperficie(float lado) {
+		System.out.println("Perimetro: " + lado * 4);
+		System.out.println("Superficie: " + lado * lado);
+	}
 }
